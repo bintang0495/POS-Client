@@ -1,10 +1,11 @@
 import { GET_ADDRESS } from '../constants/actionTypes';
 
-export default (carts = [], action) => {
+export default (address = [], action) => {
   switch (action.type) {
     case GET_ADDRESS:
       return action.data;
     default:
-      return carts;
+      console.log(action.data);
+      return address;
   }
 };

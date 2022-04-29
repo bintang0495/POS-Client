@@ -29,7 +29,7 @@ export const GET_CART = 'GET_CART';
 
 //ADDRESS
 export const GET_ADDRESS = 'GET_ADDRESS';
-export const GET_PROVINCI = 'GET_PROVINCI';
+export const GET_PROVINSI = 'GET_PROVINSI';
 export const GET_KAB = 'GET_KAB';
 export const GET_KEC = 'GET_KEC';
 export const GET_KEL = 'GET_KEL';

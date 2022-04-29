@@ -18,7 +18,7 @@ function App() {
         <Route path='/cart' element={<Cart />} />
         <Route path='/account' element={<Account />} />
       </Routes>
-      <Copyright sx={{ mt: '20%', mb: 4 }} />
+      {/* <Copyright sx={{ mt: '22%', mb: 4 }} /> */}
     </Router>
   );
 }
