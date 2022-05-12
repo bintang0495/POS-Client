@@ -57,7 +57,7 @@ const Account = () => {
   };
 
   return (
-    <>
+    <div style={{ marginBottom: '38%' }}>
       <Typography
         variant='body2'
         align='center'
@@ -111,7 +111,7 @@ const Account = () => {
           Alamat
         </TabPanel> */}
       </Box>
-    </>
+    </div>
   );
 };
 

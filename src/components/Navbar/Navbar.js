@@ -20,6 +20,7 @@ import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import { totalItemCart } from '../../utils';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCart } from '../../actions/cart';
+import { getAddress, getProvinsi } from '../../actions/address';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -72,6 +73,8 @@ const Navbar = ({ setKeySearch }) => {
     setUser(JSON.parse(localStorage.getItem('profile')));
     if (user?.user) {
       dispatch(getCart());
+      dispatch(getAddress());
+      dispatch(getProvinsi());
     }
   }, [location, dispatch]);
 

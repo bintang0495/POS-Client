@@ -33,3 +33,7 @@ export const GET_PROVINSI = 'GET_PROVINSI';
 export const GET_KAB = 'GET_KAB';
 export const GET_KEC = 'GET_KEC';
 export const GET_KEL = 'GET_KEL';
+
+//ORDERS
+export const ADD_ORDER = 'ADD_ORDER';
+export const GET_ORDER_LIST = 'GET_ORDER_LIST';

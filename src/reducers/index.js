@@ -8,6 +8,8 @@ import provReducers from './provReducers';
 import kabReducers from './kabReducers';
 import kecReducers from './kecReducers';
 import kelReducers from './kelReducers';
+import addressReducers from './addressReducers';
+import orderReducers from './orderReducers';
 
 export default combineReducers({
   authReducer,
@@ -19,4 +21,6 @@ export default combineReducers({
   kabReducers,
   kecReducers,
   kelReducers,
+  addressReducers,
+  orderReducers,
 });

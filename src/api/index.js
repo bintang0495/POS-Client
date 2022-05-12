@@ -24,8 +24,14 @@ export const fetchCart = () => API.get('/carts');
 
 export const fetchAddress = () => API.get('/delivery-addresses');
 export const addAddress = (formData) =>
-  API.put('/delivery-addresses', formData);
+  API.post('/delivery-addresses', formData);
+export const updateAddress = (formData, id) =>
+  API.put(`/delivery-addresses/${id}`, formData);
+
 export const getLocation = (lokasi, kodeInduk) =>
-  API.get(
+  axios.get(
     `https://regions-indoneisa.herokuapp.com/api/${lokasi}?kode_induk=${kodeInduk}`
   );
+
+export const orderItems = (formData) => API.push('/orders', { formData });
+export const getOrderLIst = () => API.get('/orders');
