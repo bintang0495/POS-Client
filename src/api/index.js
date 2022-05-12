@@ -33,5 +33,6 @@ export const getLocation = (lokasi, kodeInduk) =>
     `https://regions-indoneisa.herokuapp.com/api/${lokasi}?kode_induk=${kodeInduk}`
   );
 
-export const orderItems = (formData) => API.push('/orders', { formData });
-export const getOrderLIst = () => API.get('/orders');
+export const orderItems = (formData) => API.post('/orders', formData);
+export const getOrderLIst = (params) => API.get('/orders', { params });
+export const getInvoice = (id) => API.get(`/invoice/${id}`);

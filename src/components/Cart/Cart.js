@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { patchCart } from '../../actions/cart';
 import { urlServer } from '../../constants/urlServer';
-import { formatThousand, totalHargaCart, totalItemCart } from '../../utils';
+import { formatThousand, totalHargaCart } from '../../utils';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
@@ -48,8 +48,14 @@ const Cart = () => {
               Qty
             </Grid>
           </Grid>
-          {carts?.map((cart) => (
-            <Grid container spacing={3} mt={0.5} border={1} borderRadius={2}>
+          {carts?.map((cart, index) => (
+            <Grid
+              container
+              spacing={3}
+              mt={0.5}
+              border={1}
+              borderRadius={2}
+              key={index}>
               <Grid item xs={2}>
                 <img
                   src={`${urlServer}/imgProduct/${cart.product.image_url}`}

@@ -4,26 +4,25 @@ import { useDispatch, useSelector } from 'react-redux';
 import { formatThousand, ongkir, totalHargaCart } from '../../../utils';
 import { Link, useNavigate } from 'react-router-dom';
 import { addOrder } from '../../../actions/order';
+import { CLEAR_CART } from '../../../constants/actionTypes';
 
 const ConfirmOrder = () => {
   const address = useSelector((state) => state.addressReducers);
   const carts = useSelector((state) => state.cartReducers);
-  const detailAlamat = address.map(
-    (row) =>
-      row.provinsi +
-      ',' +
-      row.kabupaten +
-      ',' +
-      row.kecamatan +
-      ',' +
-      row.kelurahan +
-      ',' +
-      row.detail
-  );
+  const detailAlamat =
+    address[0].provinsi +
+    ',' +
+    address[0].kabupaten +
+    ',' +
+    address[0].kecamatan +
+    ',' +
+    address[0].kelurahan +
+    ',' +
+    address[0].detail;
   const totalPembayaran = ongkir + totalHargaCart(carts);
   const formData = {
     delivery_fee: totalPembayaran,
-    delivery_address: detailAlamat,
+    delivery_address: address[0]._id,
   };
   const history = useNavigate();
 
@@ -88,7 +87,10 @@ const ConfirmOrder = () => {
           <Button
             variant='contained'
             color='success'
-            onClick={() => dispatch(addOrder(formData, history))}>
+            onClick={() => {
+              dispatch(addOrder(formData, history));
+              dispatch({ type: CLEAR_CART });
+            }}>
             Process
           </Button>
         </Grid>

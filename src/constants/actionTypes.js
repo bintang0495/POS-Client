@@ -24,7 +24,7 @@ export const LOGOUT = 'LOGOUT';
 
 //CART
 export const INC_CART = 'INC_CART';
-export const DEC_CART = 'DEC_CART';
+export const CLEAR_CART = 'CLEAR_CART';
 export const GET_CART = 'GET_CART';
 
 //ADDRESS
@@ -37,3 +37,4 @@ export const GET_KEL = 'GET_KEL';
 //ORDERS
 export const ADD_ORDER = 'ADD_ORDER';
 export const GET_ORDER_LIST = 'GET_ORDER_LIST';
+export const GET_INVOICE = 'GET_INVOICE';

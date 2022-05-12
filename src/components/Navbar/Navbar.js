@@ -21,6 +21,7 @@ import { totalItemCart } from '../../utils';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCart } from '../../actions/cart';
 import { getAddress, getProvinsi } from '../../actions/address';
+import { getOrderItems } from '../../actions/order';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',

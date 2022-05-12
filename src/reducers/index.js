@@ -10,6 +10,7 @@ import kecReducers from './kecReducers';
 import kelReducers from './kelReducers';
 import addressReducers from './addressReducers';
 import orderReducers from './orderReducers';
+import invoiceReducers from './invoiceReducers';
 
 export default combineReducers({
   authReducer,
@@ -23,4 +24,5 @@ export default combineReducers({
   kelReducers,
   addressReducers,
   orderReducers,
+  invoiceReducers,
 });

@@ -21,10 +21,10 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/account' element={<Account />} />
           <Route path='/confirmOrder' element={<ConfirmOrder />} />
-          <Route path='/invoice' element={<Invoice />} />
+          <Route path='/invoice/:id' element={<Invoice />} />
         </Routes>
       </div>
-      <Copyright sx={{ mt: 4, mb: 4 }} />
+      {/* <Copyright sx={{ mt: 4, mb: 4 }} /> */}
     </Router>
   );
 }
