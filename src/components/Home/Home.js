@@ -14,7 +14,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCategory, getProduct, getTag } from '../../actions/product';
 import { urlServer } from '../../constants/urlServer';
 import { useNavigate } from 'react-router-dom';
-import { getCart, patchCart } from '../../actions/cart';
+import { patchCart } from '../../actions/cart';
 import Category from './Category';
 import { formatThousand } from '../../utils';
 
@@ -46,7 +46,7 @@ const Home = ({ keySearch }) => {
               <Card sx={{ maxWidth: 345 }}>
                 <CardMedia
                   component='img'
-                  alt='green iguana'
+                  alt={product.name}
                   height='250'
                   image={`${urlServer}/imgProduct/${product.image_url}`}
                 />

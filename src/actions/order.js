@@ -21,7 +21,6 @@ export const addOrder = (formData, history) => async (dispatch) => {
 export const getOrderItems = (param) => async (dispatch) => {
   try {
     const { data } = await api.getOrderLIst(param);
-    console.log(data);
     dispatch({ type: GET_ORDER_LIST, data });
   } catch (error) {
     console.log(error);

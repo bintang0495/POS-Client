@@ -1,7 +1,5 @@
 import {
   Button,
-  Container,
-  Grid,
   Paper,
   Table,
   TableBody,
@@ -9,7 +7,6 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Typography,
 } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -91,17 +88,21 @@ const Pemesanan = () => {
           <>
             <Button variant='contained'>{page}</Button>
             {'    . . .    '}
-            <Button>{Math.floor(orderItem.count / 5)}</Button>
+            <Button onClick={() => setPage(Math.floor(orderItem.count / 5))}>
+              {Math.floor(orderItem.count / 5)}
+            </Button>
           </>
         ) : page !== Math.floor(orderItem.count / 5) ? (
           <>
-            <Button>1</Button>
+            <Button onClick={() => setPage(1)}>1</Button>
             <Button variant='contained'>{page}</Button>
-            <Button>{Math.floor(orderItem.count / 5)}</Button>
+            <Button onClick={() => setPage(Math.floor(orderItem.count / 5))}>
+              {Math.floor(orderItem.count / 5)}
+            </Button>
           </>
         ) : (
           <>
-            <Button>1</Button>
+            <Button onClick={() => setPage(1)}>1</Button>
             {'    . . .    '}
             <Button variant='contained'>
               {Math.floor(orderItem.count / 5)}
