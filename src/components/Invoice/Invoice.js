@@ -10,7 +10,7 @@ const Invoice = () => {
   const invoice = useSelector((state) => state.invoiceReducers);
   useEffect(() => {
     dispatch(getInvoice(id));
-  }, [id]);
+  }, [id, dispatch]);
 
   return (
     <Container maxWidth='md'>

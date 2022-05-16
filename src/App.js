@@ -24,7 +24,7 @@ function App() {
           <Route path='/invoice/:id' element={<Invoice />} />
         </Routes>
       </div>
-      {/* <Copyright sx={{ mt: 4, mb: 4 }} /> */}
+      <Copyright sx={{ mt: 4, mb: 4 }} />
     </Router>
   );
 }

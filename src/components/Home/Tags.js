@@ -1,9 +1,8 @@
 import { Button, Typography } from '@mui/material';
 
 // import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getTag } from '../../actions/product';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const BtnTags = (props) => {
   const { value, variant, tagValue, setTagValue } = props;

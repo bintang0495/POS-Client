@@ -16,11 +16,9 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   addAddress,
-  getAddress,
   getKabupaten,
   getKecamatan,
   getKel,
-  getProvinsi,
   updateAddress,
 } from '../../../actions/address';
 import { getKode } from '../../../utils';
